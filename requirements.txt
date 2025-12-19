@@ -1,0 +1,12 @@
+# SC-D70 MIDI Bridge Dependencies
+
+# Core dependencies
+pyusb>=1.2.1      # USB communication
+pygame>=2.0.0     # MIDI handling
+numpy>=1.20.0     # Audio processing (research tools)
+
+# Menu bar app
+rumps>=0.4.0      # macOS menu bar interface
+
+# Research tools only
+sounddevice>=0.4.0  # Audio I/O for diagnostics

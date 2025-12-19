@@ -1,0 +1,9 @@
+venv/
+ref/
+.DS_Store
+build/
+*.app
+*.zip
+*.json
+__pycache__/
+*.pyc
