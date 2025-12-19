@@ -1,4 +1,4 @@
-# SC-D70 MIDI Bridge
+# SC-D70 USB Midi Bridge
 
 A USB MIDI bridge for the Roland SC-D70 sound module on macOS.
 
