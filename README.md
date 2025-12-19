@@ -60,6 +60,18 @@ For audio output, use the **SC-D70's analog audio output** (recommended).
 
 USB audio was explored but Python's USB library cannot achieve the required 288 kB/s throughput for 48kHz stereo 24-bit audio. See `research/` folder for detailed findings.
 
+> ⚠️ Important Hardware Note: Analog Ground Loops
+> The SC-D70 is a hybrid MIDI/Audio interface. When connecting the RCA Outputs to another USB-powered device (like a guitar processor or audio interface) while the SC-D70 is also connected to your Mac via USB, you will likely experience a significant ground loop buzz (digital noise).
+>
+> The "Intended" Usage Scenario
+> This driver is primarily designed for users who want to use the SC-D70 as a standalone sound module.
+> (_i.e._ plug your headphones into the front of the device)
+> 
+> Best Experience: Connect the SC-D70 to your Mac via USB to send MIDI data using this driver, and monitor the audio directly from the front-panel headphone jack. This avoids the common ground loop issues associated with the rear RCA outputs.
+> 
+> For External Recording: If you must route the RCA outputs into another USB-powered interface, it is highly recommended to use a 5-pin MIDI cable (via a separate MIDI interface) instead of the USB connection (reason: MIDI uses opto-isolation and doesn't have the same electrical noise that USB causes), or insert a ground loop isolator in the analog signal path.
+
+
 ## Repository Structure
 
 ```
@@ -100,6 +112,7 @@ This project includes extensive research into the SC-D70's USB audio format. Key
 - **Python Limitation**: Cannot achieve required 288 kB/s throughput
 
 See `research/README.md` for complete details and diagnostic tools.
+
 
 ## License
 
